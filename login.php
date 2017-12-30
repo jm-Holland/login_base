@@ -30,46 +30,48 @@ $titre_page = 'Login';
 ?>
 <?php require_once'inc/header.php'; ?>
 <!--  Debut du HTML -->
-<h1 class=title>Se connecter</h1>
-<!-- si erreurs -->
-<?php if (!empty($errors)): ?>
-  <div class="notification is-danger">
-    <h2 class="title">Attention!</h2>
-    <p>Veuillez corriger les erreurs suivantes : </p>
-    <ul>
-      <!-- boucles sur chaques erreurs -->
-    <?php foreach ($errors as $error): ?>
-      <li><?= $error; ?></li>
-    <?php endforeach; ?>
-  </ul>
-  </div>
-    <?php endif ?>
-<div class="tab-content">
-  <form  action="" method="post">
-    <div class="field">
-      <label class="label">Pseudo ou email</label>
-      <input class ="input" type="text" name="username" required placeholder="Nom utilisateur">
+<section class="section">
+  <h1 class=title>Se connecter</h1>
+  <!-- si erreurs -->
+  <?php if (!empty($errors)): ?>
+    <div class="notification is-danger">
+      <h2 class="title">Attention!</h2>
+      <p>Veuillez corriger les erreurs suivantes : </p>
+      <ul>
+        <!-- boucles sur chaques erreurs -->
+      <?php foreach ($errors as $error): ?>
+        <li><?= $error; ?></li>
+      <?php endforeach; ?>
+    </ul>
     </div>
+      <?php endif ?>
+  <div class="tab-content">
+    <form  action="" method="post">
+      <div class="field">
+        <label class="label">Pseudo ou email</label>
+        <input class ="input" type="text" name="username" required placeholder="Nom utilisateur">
+      </div>
 
-    <div class="field">
-      <label class="label">Mot de passe <a href="forget.php">(Mot de passe oublié)</a></label>
-      <input class ="input" type="password" name="password" required placeholder="Votre mot de passe">
-    </div>
-    <div class="field">
+      <div class="field">
+        <label class="label">Mot de passe <a href="forget.php">(Mot de passe oublié)</a></label>
+        <input class ="input" type="password" name="password" required placeholder="Votre mot de passe">
+      </div>
+      <div class="field">
+        <div class="control">
+          <label class="checkbox">
+            <input type="checkbox">
+          Se souvenir de moi
+          </label>
+        </div>
+      </div>
+      <div class="field is-grouped">
       <div class="control">
-        <label class="checkbox">
-          <input type="checkbox">
-        Se souvenir de moi
-        </label>
+        <button class="button is-link">Se connecter</button>
+      </div>
+      <div class="control">
+        <input class="button" type="reset"  value="Effacer">
       </div>
     </div>
-    <div class="field is-grouped">
-    <div class="control">
-      <button class="button is-link">Se connecter</button>
-    </div>
-    <div class="control">
-      <input class="button" type="reset"  value="Effacer">
-    </div>
   </div>
-</div>
+</section>
 <?php require_once'inc/footer.php'; ?>

@@ -19,24 +19,21 @@ if (!empty($_POST)) {
 $titre_page = 'account';
 // mise en place du header
 include_once'inc/header.php';?>
-
-<h1 class="title">Bonjour <?= $_SESSION['auth']->username; ?></h1>
-<div class="tab_content">
-  <form  action="" method="post">
-    <div class="field">
-      <input type="password" class="input" name="password" placeholder="Changer votre mot de passe"/>
-    </div>
-    <div class="field">
-      <input type="password" class="input" name="confirm_password" placeholder="Confirmation du mot de passe"/>
-    </div>
-    <div class="field is-grouped">
-    <div class="control">
-      <button class="button is-link">Changer de mot de passe</button>
-    </div>
-  </form>
-</div>
-
-
-
-
+<section class="section">
+  <h1 class="title">Bonjour <?= $_SESSION['auth']->username; ?></h1>
+  <div class="tab_content">
+    <form  action="" method="post">
+      <div class="field">
+        <input type="password" class="input" name="password" placeholder="Changer votre mot de passe"/>
+      </div>
+      <div class="field">
+        <input type="password" class="input" name="confirm_password" placeholder="Confirmation du mot de passe"/>
+      </div>
+      <div class="field is-grouped">
+      <div class="control">
+        <button class="button is-link">Changer de mot de passe</button>
+      </div>
+    </form>
+  </div>
+</section>
 <?php include_once'inc/footer.php'; ?>

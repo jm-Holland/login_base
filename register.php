@@ -67,49 +67,51 @@ $titre_page = 'S\'incrire';
 include_once'inc/header.php';
 ?>
 
-<h1 class="title">S'incrire</h1>
-<!-- si erreurs -->
-<?php if (!empty($errors)): ?>
-  <div class="notification is-danger">
-    <h2 class="title">Attention!</h2>
-    <p>Veuillez corriger les erreurs suivantes : </p>
-    <ul>
-      <!-- boucles sur chaques erreurs -->
-    <?php foreach ($errors as $error): ?>
-      <li><?= $error; ?></li>
-    <?php endforeach; ?>
-  </ul>
-  </div>
-    <?php endif ?>
-    <div class="tab-content">
-      <form  action="" method="post">
-        <div class="field">
-          <label class="label">Pseudo<span class="req">*</span>
-          </label>
-          <input class ="input" type="text" name="username" placeholder="Votre pseudo" required>
-        </div>
-        <div class="field">
-          <label class="label">Email<span class="req">*</span>
-          </label>
-          <input class="input" type="email" name="email" placeholder="Votre adresse email" required>
-        </div>
-        <div class="FILTER_VALIDATE_EMAIL">
-          <label class="label">Mot de passe<span class="req">*</span></label>
-          <input class ="input" type="password" name="password" placeholder="Votre mot de passe" required>
-        </div>
-        <div class="field">
-          <label class="label">Confirmer votre mot de passe<span class="req">*</span></label>
-          <input class ="input" type="password" name="confirm_password" placeholder="Confirmer votre mot de passe">
-        </div>
-        <div class="field is-grouped">
-          <div class="control">
-            <button class="button is-link">S'incrire</button>
-          </div>
-          <div class="control">
-            <input class="button" type="reset"value="Annuler">
-          </div>
-        </div>
-      </form>
+<section class="section">
+  <h1 class="title">S'incrire</h1>
+  <!-- si erreurs -->
+  <?php if (!empty($errors)): ?>
+    <div class="notification is-danger">
+      <h2 class="title">Attention!</h2>
+      <p>Veuillez corriger les erreurs suivantes : </p>
+      <ul>
+        <!-- boucles sur chaques erreurs -->
+      <?php foreach ($errors as $error): ?>
+        <li><?= $error; ?></li>
+      <?php endforeach; ?>
+    </ul>
     </div>
+      <?php endif ?>
+      <div class="tab-content">
+        <form  action="" method="post">
+          <div class="field">
+            <label class="label">Pseudo<span class="req">*</span>
+            </label>
+            <input class ="input" type="text" name="username" placeholder="Votre pseudo" required>
+          </div>
+          <div class="field">
+            <label class="label">Email<span class="req">*</span>
+            </label>
+            <input class="input" type="email" name="email" placeholder="Votre adresse email" required>
+          </div>
+          <div class="FILTER_VALIDATE_EMAIL">
+            <label class="label">Mot de passe<span class="req">*</span></label>
+            <input class ="input" type="password" name="password" placeholder="Votre mot de passe" required>
+          </div>
+          <div class="field">
+            <label class="label">Confirmer votre mot de passe<span class="req">*</span></label>
+            <input class ="input" type="password" name="confirm_password" placeholder="Confirmer votre mot de passe">
+          </div>
+          <div class="field is-grouped">
+            <div class="control">
+              <button class="button is-link">S'incrire</button>
+            </div>
+            <div class="control">
+              <input class="button" type="reset"value="Annuler">
+            </div>
+          </div>
+        </form>
+      </div>
+</section>
 
 <?php include_once'inc/footer.php'; ?>

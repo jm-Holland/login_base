@@ -25,32 +25,34 @@ $titre_page = 'Forget';
 ?>
 <?php require_once'inc/header.php'; ?>
 <!-- Début du Html -->
-<h1 class="title">Mot de passe oublié</h1>
-<!-- si erreurs -->
-<?php if (!empty($errors)): ?>
-  <div class="notification is-danger">
-    <h2 class="title">Attention!</h2>
-    <p>Veuillez corriger les erreurs suivantes : </p>
-    <ul>
-      <!-- boucles sur chaques erreurs -->
-    <?php foreach ($errors as $error): ?>
-      <li><?= $error; ?></li>
-    <?php endforeach; ?>
-  </ul>
-  </div>
-    <?php endif ?>
-    <!-- Mise en place du formulaire HTML -->
-<div class="tab-content">
-  <form  action="" method="post">
-    <div class="field">
-      <label class="label">Email</label>
-      <input class ="input" type="email" name="email" required placeholder="Nom utilisateur">
+<section class="section">
+  <h1 class="title">Mot de passe oublié</h1>
+  <!-- si erreurs -->
+  <?php if (!empty($errors)): ?>
+    <div class="notification is-danger">
+      <h2 class="title">Attention!</h2>
+      <p>Veuillez corriger les erreurs suivantes : </p>
+      <ul>
+        <!-- boucles sur chaques erreurs -->
+      <?php foreach ($errors as $error): ?>
+        <li><?= $error; ?></li>
+      <?php endforeach; ?>
+    </ul>
     </div>
-    <div class="field is-grouped">
-      <div class="control">
-        <button class="button is-link">Envoyer</button>
+      <?php endif ?>
+      <!-- Mise en place du formulaire HTML -->
+  <div class="tab-content">
+    <form  action="" method="post">
+      <div class="field">
+        <label class="label">Email</label>
+        <input class ="input" type="email" name="email" required placeholder="Nom utilisateur">
       </div>
-  </form>
-</div>
+      <div class="field is-grouped">
+        <div class="control">
+          <button class="button is-link">Envoyer</button>
+        </div>
+    </form>
+  </div>
 
+</section>
 <?php require_once'inc/footer.php'; ?>

@@ -34,38 +34,39 @@ $titre_page = 'Modif mot de passe';
   <?php require_once'inc/header.php'; ?>
 
 
-<h1 class="title">Modifier mon mot de passe</h1>
-<!-- si erreurs -->
-<?php if (!empty($errors)): ?>
-  <div class="notification is-danger">
-    <h2>Attention!</h2>
-    <p>Veuillez corriger les erreurs suivantes : </p>
-    <ul>
-      <!-- boucles sur chaques erreurs -->
-    <?php foreach ($errors as $error): ?>
-      <li><?= $error; ?></li>
-    <?php endforeach; ?>
-  </ul>
+<section class="section">
+  <h1 class="title">Modifier mon mot de passe</h1>
+  <!-- si erreurs -->
+  <?php if (!empty($errors)): ?>
+    <div class="notification is-danger">
+      <h2>Attention!</h2>
+      <p>Veuillez corriger les erreurs suivantes : </p>
+      <ul>
+        <!-- boucles sur chaques erreurs -->
+      <?php foreach ($errors as $error): ?>
+        <li><?= $error; ?></li>
+      <?php endforeach; ?>
+    </ul>
+    </div>
+      <?php endif ?>
+  <div class="tab-content">
+    <form  action="" method="post">
+      <div class="field">
+        <label class="label">Nouveau mot de passe</label>
+        <input class ="input" type="password" name="password" required placeholder="Nouveau mot de passe">
+      </div>
+      <div class="field">
+        <label class="label">Confirmer mot de passe</label>
+        <input class ="input" type="password" name="confirm_password" required placeholder="Confirmer mot de passe">
+      </div>
+      <div class="field is-grouped">
+        <div class="control">
+          <button class="button is-link">Réinitialiser le mot de passe</button>
+        </div>
+        <div class="control">
+          <input type="reset" value="Annuler">
+        </div>
+    </form>
   </div>
-    <?php endif ?>
-<div class="tab-content">
-  <form  action="" method="post">
-    <div class="field">
-      <label class="label">Nouveau mot de passe</label>
-      <input class ="input" type="password" name="password" required placeholder="Nouveau mot de passe">
-    </div>
-    <div class="field">
-      <label class="label">Confirmer mot de passe</label>
-      <input class ="input" type="password" name="confirm_password" required placeholder="Confirmer mot de passe">
-    </div>
-    <div class="field is-grouped">
-      <div class="control">
-        <button class="button is-link">Réinitialiser le mot de passe</button>
-      </div>
-      <div class="control">
-        <input type="reset" value="Annuler">
-      </div>
-  </form>
-</div>
-
+</section>
 <?php require_once'inc/footer.php'; ?>
