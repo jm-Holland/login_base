@@ -21,7 +21,7 @@ if (!empty($_POST) && !empty($_POST['email'])) {
         $_SESSION['flash']['danger'] = 'Aucun compte ne correspond à cette adresse !';
     }
 }
-$titre_page='Forget';
+$titre_page = 'Forget';
 ?>
 <?php require_once'inc/header.php'; ?>
 <!-- Début du Html -->

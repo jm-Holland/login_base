@@ -16,7 +16,7 @@ if (!empty($_POST)) {
         $_SESSION['flash']['success'] = 'Votre mot de passe a bien été mis à jour';
     }
 }
-$titre_page='account';
+$titre_page = 'account';
 // mise en place du header
 include_once'inc/header.php';?>
 

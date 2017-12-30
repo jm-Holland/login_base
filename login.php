@@ -26,7 +26,7 @@ if (!empty($_POST) && !empty($_POST['username']) && !empty($_POST['password'])) 
         $_SESSION['flash']['danger'] = 'Identifiant ou mot de passe incorrecte !';
     }
 }
-$titre_page ='Login';
+$titre_page = 'Login';
 ?>
 <?php require_once'inc/header.php'; ?>
 <!--  Debut du HTML -->

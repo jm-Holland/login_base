@@ -28,6 +28,7 @@ if (isset($_GET['id']) && isset($_GET['token'])) {
     header('Location: login.php');
     exit();
 }
+$titre_page = 'Modif mot de passe';
 ?>
 
   <?php require_once'inc/header.php'; ?>

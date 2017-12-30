@@ -63,7 +63,7 @@ if (!empty($_POST)) {
         exit();
     }
 }
-$titre_page='S\'incrire';
+$titre_page = 'S\'incrire';
 include_once'inc/header.php';
 ?>
 

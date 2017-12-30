@@ -24,7 +24,7 @@ require_once'inc/config.php';
     <link href="css/master.css" rel="stylesheet">
   </head>
   <body>
-    <nav class="navbar" role="navigation" aria-label="main navigation">
+    <nav class="navbar is-transparent is-fixed-top" role="navigation" aria-label="main navigation">
     <div class="navbar-brand">
       <a href="index.php" class="navbar-item">
         <img src="http://lorempixel.com/100/100"  alt="Logo">

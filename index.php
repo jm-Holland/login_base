@@ -1,9 +1,8 @@
 <?php
-$titre_page='Accueil';
-
+$titre_page = 'Accueil';
 require_once'inc/header.php';
-
 ?>
+<!-- section Hero de bienvenu -->
 <section class="hero">
   <div class="hero-body">
     <div class="container has-text-centered">
@@ -16,6 +15,7 @@ require_once'inc/header.php';
     </div>
   </div>
 </section>
+<!-- section de compteurs -->
 <section class="section">
   <div class="container">
     <nav class="level">
@@ -46,6 +46,7 @@ require_once'inc/header.php';
     </nav>
   </div>
 </section>
+<!-- section de Tuiles -->
 <section class="section">
 <div class="container">
   <div class="tile is-ancestor">
@@ -89,13 +90,21 @@ require_once'inc/header.php';
           <figure class="image is-4by3">
             <img src="http://lorempixel.com/640/640">
           </figure>
-          <div class="content">
-            <!-- Content -->
-          </div>
         </div>
-      </article>
+        </article>
     </div>
   </div>
+    <!-- contenu du reste de la page -->
 
+<section class="section">
+  <div class="columns">
+    <div class="column">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia magnam exercitationem quo laboriosam culpa fuga asperiores doloremque ratione nulla iure assumenda commodi odit est laudantium, eligendi sunt delectus debitis repellat.</p>
+    </div>
+    <div class="column">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+  </div>
+</section>
 
 <?php require_once'inc/footer.php'; ?>
