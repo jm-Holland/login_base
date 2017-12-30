@@ -80,3 +80,10 @@ form {
   background: rgba(180,180,180,.5);
   width: 90%;
 }
+#scrollUp
+{
+position: fixed;
+bottom : 10px;
+right: -100px;
+opacity: 0.8;
+}
