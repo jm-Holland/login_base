@@ -44,9 +44,7 @@ CREATE TABLE `users` (
 -- Déchargement des données de la table `users`
 --
 
-INSERT INTO `users` (`id`, `username`, `email`, `password`, `confirmation_token`, `confirmed_at`, `reset_token`, `reset_at`, `remember_token`) VALUES
-(3, 'Julien', 'julien@julien.fr', '$2y$10$iUz0zqDRdL4fSZKK3v4l/ukAMFpCwoZmzz8CdG.vzj0wcuQDLY1DK', '5uBTl)7gm/OY9e&&8OQCJfGoiIq9DoJW3K6zHNNidJjgFVs/pGrE(IxlZt/z', NULL, NULL, NULL, NULL),
-(4, 'Justine', 'ju@ju.fr', '$2y$10$xFmypHNM7bFT/Tqr/h7O7eGGa0QZEy2Bi4FnSuGSWur5qgQ1d2WP.', 'I6Maotj8bRdKDqIJetnaGgp854P9vT)g)zuCVoyUl0haE3U5jAiKvrVAAqbg', NULL, NULL, NULL, NULL);
+
 
 --
 -- Index pour les tables déchargées

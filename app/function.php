@@ -3,16 +3,16 @@
 /* debugage des variables*/
 function debug($variables)
 {
-    echo '<pre>'.print_r($variables, true) . '</pre>';
+    echo '<pre>' . print_r($variables, true) . '</pre>';
 }
 /* Token aléatoire */
 function str_random($length)
 {
     $string = "";
     $chaine = "01&()23456789*azert/yuiopqsdfghjklmwxcvbnAZERTYUIOPQSDFGHJKLMWXCVBN";
-    srand((double)microtime()*1000000);
-    for ($i=0; $i<$length; $i++) {
-        $string .= $chaine[rand()%strlen($chaine)];
+    srand((float)microtime() * 1000000);
+    for ($i = 0; $i < $length; $i++) {
+        $string .= $chaine[rand() % strlen($chaine)];
     }
     return $string;
 }
@@ -35,7 +35,7 @@ function reconnect_from_cookie()
         session_start();
     }
     if (isset($_COOKIE['remember']) && !isset($_SESSION['auth'])) {
-        require_once'db.php';
+        require_once './db.php';
         if (!isset($pdo)) {
             global $pdo;
         }
@@ -46,13 +46,13 @@ function reconnect_from_cookie()
         $req->execute([$user_id]);
         $user = $req->fetch();
         if ($user) {
-            $expected = $user->id . '//' . $user->$remember_token . sha1($user_id.'clefdecryptage');
+            $expected = $user->id . '//' . $user->$remember_token . sha1($user_id . 'clefdecryptage');
             if ($expected == $remember_token) {
                 if (session_status() == PHP_SESSION_NONE) {
                     session_start();
                 }
                 $_session['auth'] = $user;
-                setcookie('remember', $remember_token, time()+ 86400 * 7);
+                setcookie('remember', $remember_token, time() + 86400 * 7);
             } else {
                 setcookie('remember', null, -1);
             }

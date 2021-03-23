@@ -1,0 +1,29 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  height: 100vh;
+  background-color: #fff;
+}
+.navbar {
+  background: #ccc;
+}
+.navbar-brand img {
+  height: 2.5em;
+}
+
+.container {
+  padding: 3rem;
+  background: #fff;
+}
+.footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: #ccc;
+}

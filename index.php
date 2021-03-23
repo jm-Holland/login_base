@@ -1,10 +1,16 @@
 <?php
-require_once'inc/header.php'; ?>
+require_once '_header.php'; ?>
 
-<h1 class="title">Bienvenue sur le site</h1>
-<p>Accès basique à une page du site</p>
-
-
-
-
-<?php require_once'inc/footer.php'; ?>
+<section class="hero  is-halfheight">
+    <div class="hero-body">
+        <div class="">
+            <p class="title">
+                Page d'accueil
+            </p>
+            <p class="subtitle">
+                test de login page php
+            </p>
+        </div>
+    </div>
+</section>
+<?php require_once '_footer.php'; ?>
