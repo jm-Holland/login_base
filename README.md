@@ -31,3 +31,7 @@ Ouivrir le fichier config.php et saisir les informations demandés concernant la
 ### A vous de jouer
 
 Beaucoup d'amélioration peuvent-être apportés.Ce n'est qu'une base de départ.
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
