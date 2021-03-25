@@ -21,21 +21,23 @@ if (!empty($_POST)) {
 }
 // mise en place du header
 include_once '../_header.php'; ?>
+<section class="container">
 
-<h1 class="title">Bonjour <?= $_SESSION['auth']->username; ?></h1>
-<form action="" method="post">
-  <div class="field">
-    <input type="password" class="input" name="password" placeholder="Changer votre mot de passe" />
-  </div>
-  <div class="field">
-    <input type="password" class="input" name="confirm_password" placeholder="Confirmation du mot de passe" />
-  </div>
-  <div class="field is-grouped">
-    <div class="control">
-      <button class="button is-link">Changer de mot depasse</button>
+  <h1 class="title">Bonjour <?= $_SESSION['auth']->username; ?></h1>
+  <form action="" method="post">
+    <div class="field">
+      <input type="password" class="input" name="password" placeholder="Changer votre mot de passe" />
     </div>
-</form>
+    <div class="field">
+      <input type="password" class="input" name="confirm_password" placeholder="Confirmation du mot de passe" />
+    </div>
+    <div class="field is-grouped">
+      <div class="control">
+        <button class="button is-link">Changer de mot depasse</button>
+      </div>
+  </form>
 
+</section>
 
 
 

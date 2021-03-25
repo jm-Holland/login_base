@@ -32,34 +32,34 @@ if (isset($_GET['id']) && isset($_GET['token'])) {
 
 <?php require_once '../_header.php'; ?>
 
-
-<h1 class="title">Modifier mon mot de passe</h1>
-<!-- si erreurs -->
-<?php if (!empty($errors)) : ?>
-  <div class="notification is-danger">
-    <h2>Attention!</h2>
-    <p>Veuillez corriger les erreurs suivantes : </p>
-    <ul>
-      <!-- boucles sur chaques erreurs -->
-      <?php foreach ($errors as $error) : ?>
-        <li><?= $error; ?></li>
-      <?php endforeach; ?>
-    </ul>
-  </div>
-<?php endif ?>
-<form action="" method="post">
-  <div class="field">
-    <label class="label">Nouveau mot de passe</label>
-    <input class="input" type="password" name="password" required placeholder="Nouveau mot de passe">
-  </div>
-  <div class="field">
-    <label class="label">Confirmer mot de passe</label>
-    <input class="input" type="password" name="confirm_password" required placeholder="Confirmer mot de passe">
-  </div>
-  <div class="field is-grouped">
-    <div class="control">
-      <button class="button is-link">Réinitialiser le mot de passe</button>
+<section class="section">
+  <h1 class="title">Modifier mon mot de passe</h1>
+  <!-- si erreurs -->
+  <?php if (!empty($errors)) : ?>
+    <div class="notification is-danger">
+      <h2>Attention!</h2>
+      <p>Veuillez corriger les erreurs suivantes : </p>
+      <ul>
+        <!-- boucles sur chaques erreurs -->
+        <?php foreach ($errors as $error) : ?>
+          <li><?= $error; ?></li>
+        <?php endforeach; ?>
+      </ul>
     </div>
-</form>
-
+  <?php endif ?>
+  <form action="" method="post">
+    <div class="field">
+      <label class="label">Nouveau mot de passe</label>
+      <input class="input" type="password" name="password" required placeholder="Nouveau mot de passe">
+    </div>
+    <div class="field">
+      <label class="label">Confirmer mot de passe</label>
+      <input class="input" type="password" name="confirm_password" required placeholder="Confirmer mot de passe">
+    </div>
+    <div class="field is-grouped">
+      <div class="control">
+        <button class="button is-link">Réinitialiser le mot de passe</button>
+      </div>
+  </form>
+</section>
 <?php require_once '../_footer.php'; ?>

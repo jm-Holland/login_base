@@ -18,34 +18,42 @@ require_once 'app/function.php';
   <!-- Bulma core CSS -->
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.1/css/bulma.min.css">
+
   <!-- Custom styles for this template -->
-  <link href="public/css/master.css" rel="stylesheet">
+  <link href="/public/css/master.css" rel="stylesheet">
 </head>
 
 <body>
-  <nav class="navbar" role="navigation" aria-label="main navigation">
-    <div class="navbar-brand">
-      <a href="/index.php" class="navbar-item">
-        <img src="https://picsum.photos/150/150" alt="Logo">
-      </a>
-      <div class="navbar-burger burger" data-target="toggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
+  <section class="hero is-default is-bold">
+    <div class="hero-head">
+      <nav class="navbar">
+        <div class="container">
+          <div class="navbar-brand">
+            <a class="navbar-item" href="../">
+              <img src="/public/image/logo.png" alt="Logo">
+            </a>
+            <span class="navbar-burger burger" data-target="navbarMenu">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </div>
+          <div id="navbarMenu" class="navbar-menu">
+            <div class="navbar-end">
+              <div class="tabs is-right">
+                <ul>
+                  <li class="is-active"><a href="../">Home</a></li>
+                  <li><a href="/app/register.php">S'incrire</a></li>
+                  <li><a href="/app/login.php">Se connecter</a></li>
+                  <li><a href="/app/logout.php">Se déconnecter</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
     </div>
-    <div class="navbar-menu navbar-end" id="toggle">
-      <?php if (isset($_SESSION['auth'])) : ?>
-        <a class="navbar-item" href="../app/logout.php">Se déconnecter</a>
-      <?php else : ?>
-        <a class="navbar-item" href="../app/register.php">S'incrire</a>
-        <a class="navbar-item" href="../app/login.php">Se connecter</a>
-      <?php endif; ?>
-    </div>
-  </nav>
 
-  <section class="section">
 
     <?php if (isset($_SESSION['flash'])) : ?>
       <?php foreach ($_SESSION['flash'] as $type => $message) : ?>

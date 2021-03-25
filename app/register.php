@@ -65,48 +65,57 @@ if (!empty($_POST)) {
 }
 include_once '../_header.php';
 ?>
-
-<h1 class="title">S'incrire</h1>
-<!-- si erreurs -->
-<?php if (!empty($errors)) : ?>
-  <div class="notification is-danger">
-    <h2 class="title">Attention!</h2>
-    <p>Veuillez corriger les erreurs suivantes : </p>
-    <ul>
-      <!-- boucles sur chaques erreurs -->
-      <?php foreach ($errors as $error) : ?>
-        <li><?= $error; ?></li>
-      <?php endforeach; ?>
-    </ul>
-  </div>
-<?php endif ?>
-<form action="" method="post">
-  <div class="field">
-    <label class="label">Pseudo</label>
-    <input class="input" type="text" name="username" required placeholder="Nom utilisateur">
-  </div>
-  <div class="field">
-    <label class="label">Email</label>
-    <input class="finput" type="email" name="email" required placeholder="Votre email">
-  </div>
-  <div class="FILTER_VALIDATE_EMAIL">
-    <label class="label">Mot de passe</label>
-    <input class="input" type="password" name="password" required placeholder="Votre mot de passe">
-  </div>
-  <div class="field">
-    <label class="label">Confirmer votre mot de passe</label>
-    <input class="input" type="password" name="confirm_password" required placeholder="Confirmer votre mot de passe">
-  </div>
-
-  <div class="field is-grouped">
-    <div class="control">
-      <button class="button is-link">S'incrire</button>
+<section class="container">
+  <h1 class="title has-text-centered">Inscription</h1>
+  <!-- si erreurs -->
+  <?php if (!empty($errors)) : ?>
+    <div class="notification is-danger">
+      <h2 class="title">Attention!</h2>
+      <p>Veuillez corriger les erreurs suivantes : </p>
+      <ul>
+        <!-- boucles sur chaques erreurs -->
+        <?php foreach ($errors as $error) : ?>
+          <li><?= $error; ?></li>
+        <?php endforeach; ?>
+      </ul>
     </div>
-    <div class="control">
-      <button class="button is-text">Cancel</button>
+  <?php endif ?>
+  <div class="card">
+    <div class="card-header">
+      <p class="card-header-title">S'incrire</p>
+    </div>
+    <div class="card-content">
+      <form action="" method="post">
+        <div class="field">
+          <label class="label">Pseudo</label>
+          <input class="input" type="text" name="username" required placeholder="Nom utilisateur">
+        </div>
+        <div class="field">
+          <label class="label">Email</label>
+          <input class="input" type="email" name="email" required placeholder="Votre email">
+        </div>
+        <div class="FILTER_VALIDATE_EMAIL">
+          <label class="label">Mot de passe</label>
+          <input class="input" type="password" name="password" required placeholder="Votre mot de passe">
+        </div>
+        <div class="field">
+          <label class="label">Confirmer votre mot de passe</label>
+          <input class="input" type="password" name="confirm_password" required placeholder="Confirmer votre mot de passe">
+        </div>
+
+
+        <div class="field is-grouped">
+          <div class="control">
+            <button class="button is-link">S'incrire</button>
+          </div>
+          <div class="control">
+            <button class="button is-text" type="reset">Annuler</button>
+          </div>
+        </div>
+
+      </form>
     </div>
   </div>
-</form>
-
+</section>
 
 <?php include_once '../_footer.php'; ?>

@@ -29,44 +29,58 @@ if (!empty($_POST) && !empty($_POST['username']) && !empty($_POST['password'])) 
 ?>
 <?php require_once '../_header.php'; ?>
 <!--  Debut du HTML -->
-<h1 class=title>Se connecter</h1>
-<!-- si erreurs -->
-<?php if (!empty($errors)) : ?>
-  <div class="notification is-danger">
-    <h2 class="title">Attention!</h2>
-    <p>Veuillez corriger les erreurs suivantes : </p>
-    <ul>
-      <!-- boucles sur chaques erreurs -->
-      <?php foreach ($errors as $error) : ?>
-        <li><?= $error; ?></li>
-      <?php endforeach; ?>
-    </ul>
-  </div>
-<?php endif ?>
-<form action="" method="post">
-  <div class="field">
-    <label class="label">Pseudo ou email</label>
-    <input class="input" type="text" name="username" required placeholder="Nom utilisateur">
-  </div>
+<section class="hero">
+  <!-- si erreurs -->
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <div class="column is-4 is-offset-4">
+        <h3 class="title has-text-black">Connexion</h3>
+        <hr class="login-hr">
+        <p class="subtitle has-text-black">Merci de remplir le formulaire</p>
+        <div class="box">
+          <figure class="avatar"><img src="https://picsum.photos/128/128?random" alt="Image random"></figure>
+          <?php if (!empty($errors)) : ?>
+            <div class="notification is-danger">
+              <h2 class="title">Attention!</h2>
+              <p>Veuillez corriger les erreurs suivantes : </p>
+              <ul>
+                <!-- boucles sur chaques erreurs -->
+                <?php foreach ($errors as $error) : ?>
+                  <li><?= $error; ?></li>
+                <?php endforeach; ?>
+              </ul>
+            </div>
+          <?php endif ?>
+          <form method="post">
+            <div class="field">
+              <label class="label">Pseudo ou email</label>
+              <input class="input" type="text" name="username" required placeholder="Nom utilisateur">
+            </div>
 
-  <div class="field">
-    <label class="label">Mot de passe <a href="forget.php">(Mot de passe oublié)</a></label>
-    <input class="inputl" type="password" name="password" required placeholder="Votre mot de passe">
-  </div>
-  <div class="field">
-    <div class="control">
-      <label class="checkbox">
-        <input type="checkbox">
-        Se souvenir de moi
-      </label>
+            <div class="field">
+              <input class="input" type="password" name="password" required placeholder="Votre mot de passe">
+            </div>
+            <div class="field">
+              <div class="control">
+                <label class="checkbox">
+                  <input type="checkbox">
+                  Se souvenir de moi
+                </label>
+              </div>
+            </div>
+            <div class="field is-grouped">
+              <div class="control">
+                <button class="button is-link">Se connecter</button>
+              </div>
+              <div class="control">
+                <button class="button is-text" type="reset">Annuler</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <label class="label">Mot de passe <a href="forget.php">(Mot de passe oublié)</a></label>
     </div>
   </div>
-  <div class="field is-grouped">
-    <div class="control">
-      <button class="button is-link">Se connecter</button>
-    </div>
-    <div class="control">
-      <button class="button is-text">Annuler</button>
-    </div>
-  </div>
-  <?php require_once '../_footer.php'; ?>
+</section>
+<?php require_once '../_footer.php'; ?>
